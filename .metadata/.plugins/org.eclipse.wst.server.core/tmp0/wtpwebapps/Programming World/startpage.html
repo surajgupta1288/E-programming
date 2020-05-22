@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p{
+font-color:green;
+}
+* {
+		padding: 0;
+		margin: 0;
+}
+
+html {
+		background: #000;
+}
+
+body {
+		background: #053d4e;
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient( to bottom right, rgba(6, 0, 255, 0.3), rgba(255, 0, 0, 0.3));
+}
+
+.container {
+		position: absolute;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+		width: 100%;
+}
+
+.right {
+		float: left;
+		color: #FFF;
+		width: 50%;
+		text-align: right;
+}
+
+.left {
+		float: left;
+		color: #7a7a7a;
+		width: 50%;
+		text-align: right;
+		-moz-transform: scale(-1, 1);
+		-webkit-transform: scale(-1, 1);
+		-o-transform: scale(-1, 1);
+		-ms-transform: scale(-1, 1);
+		transform: scale(-1, 1);
+		margin-top: 40px;
+}
+
+h1,
+h4 {
+		-webkit-transition: opacity .25s;
+		-moz-transition: opacity .25s;
+		-o-transition: opacity .25s;
+		-ms-transition: opacity .25s;
+		transition: opacity .25s;
+		font-family: "FARCRY", Verdana, Tahoma;
+}
+
+h1 {
+		font-size: 6vw;
+}
+
+h4 {
+		font-size: 3vw;
+}
+
+h4:first-child {
+		margin-bottom: -2vw;
+}
+
+h4:last-child {
+		margin-top: -1.7vw;
+}
+.sub a{
+	color:#fff;
+	background:#272727;
+	text-decoration:none;
+	padding:10px 20px;
+	font-size:13px;
+	font-family: arial, serif;
+	font-weight:bold;
+	-webkit-border-radius:.5em;
+	-moz-border-radius:.5em;
+	-border-radius:.5em;
+}
+
+</style>
+<script>
+var words = ["LINUX", "UNIX", "C++", "C", "JAVA", "HTML", "CSS", "PYTHON", "RUBY", "My-sql", "JavaScript", "Perl", "Ajax"];
+
+window.addEventListener("load", function() {
+		var randoms = window.document.getElementsByClassName("randoms");
+		for (i = 0; i < randoms.length; i++)
+				changeWord(randoms[i]);
+}, false);
+
+function changeWord(a) {
+		a.style.opacity = '0.1';
+		a.innerHTML = words[getRandomInt(0, words.length - 1)];
+		setTimeout(function() {
+				a.style.opacity = '1';
+		}, 425);
+		setTimeout(function() {
+				changeWord(a);
+		}, getRandomInt(500, 800));
+}
+
+
+function getRandomInt(min, max) {
+		return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+
+
+var blink_speed = 500;
+var t = setInterval(function () {
+    var ele = document.getElementById('blinker');
+    ele.style.visibility = (ele.style.visibility == 'hidden' ? '' : 'hidden');
+}, blink_speed);
+</script>
+</head>
+<body>
+
+<p align="center" style="color:powderblue"><font size="10">PROGRAMMING WORLD</font></p>
+<div class="container">
+	<div class="right">
+			<h4 class="randoms"></h4>
+			<h1 class="randoms"></h1>
+			<h4 class="randoms"></h4>
+	</div>
+	<div class="left">
+			<h4 class="randoms"></h4>
+			<h1 class="randoms"></h1>
+			<h4 class="randoms"></h4>
+	</div>
+</div>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/><br/>
+<br/>
+<br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<div align="center">
+
+<span id="blinker" class="hi"><font color="red">Click Here For Login</font></span>
+<br/><br>
+<h3 class="sub"><a href="Login.html" >LOGIN</a></h3>
+
+</div>
+<br/>
+
+<font color="#adff2f">DESIGNED & DEVELOPED BY: Suraj Ku Gupta</font>
+
+</body>
